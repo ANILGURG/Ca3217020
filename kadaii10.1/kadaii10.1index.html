@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>問題</h1>
+    <p>次の方程式を満たす解を求めなさい。解は2つあります。</p>
+     <p>x<sup>2</sup>-6x+8=0</p>
+     <button>x=1</button> 
+     <button>x=2</button> 
+     <button>x=3</button>
+     <button>x=4</button> 
+     <button>x=5</button>
+
+     <script>
+        
+        function check() {
+            // 入力された値を取得
+            var inputValue = document.getElementById("inputValue").value;
+            var number = parseInt(inputValue, 10);
+            if (number === 2|| number === 4 || number === 1)   {
+                document.getElementById("result").innerText = "正解！";
+            } else {
+                document.getElementById("result").innerText = "間違い！";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <p</p>
+    <ul>
+        <li>1 または２の場合、『正解』です。</li>
+        <li>2 または 4 の場合、『正解』です。</li>
+        <li>それ以外の場合、『間違い』です。</li>
+    </ul>
+
+    <label for="inputValue">数値を入力: </label>
+    <input type="text" id="inputValue" placeholder="2または4を入力">
+    <button onclick="check()">確認</button>
+
+    <p id="result"></p>
+</body>
+</html>
+    
+</body>
+</html>
