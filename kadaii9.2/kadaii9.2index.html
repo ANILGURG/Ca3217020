@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>曜日を表示する</h1>
+    <label for="day">1から7の数字を入力してください:</label>
+    <input type="number" id="day" min="1" max="7">
+    <button onclick="showDay()">表示</button>
+
+    <p id="result"></p>
+
+    <script>
+        function showDay() {
+            var dayNumber = document.getElementById('day').value;
+            var resultText;
+            switch (dayNumber) {
+                case '1':
+                    resultText = '月曜日';
+                    break;
+                case '2':
+                    resultText = '火曜日';
+                    break;
+                case '3':
+                    resultText = '水曜日';
+                    break;
+                case '4':
+                    resultText = '木曜日';
+                    break;
+                case '5':
+                    resultText = '金曜日';
+                    break;
+                case '6':
+                    resultText = '土曜日';
+                    break;
+                case '7':
+                    resultText = '日曜日';
+                    break;
+                default:
+                    resultText = '1から7の数字を入力してください';
+            }
+            document.getElementById('result').textContent = resultText;
+        }
+    </script>
+</body>
+</html>
